@@ -1,0 +1,16 @@
+@Grab('org.gebish:geb-core')
+@Grab('org.seleniumhq.selenium:selenium-firefox-driver')
+
+import geb.Browser
+
+Browser.drive {
+   
+   go 'file:///D:/Temp/handson/introWork/Introwork_êîíl.html'
+   
+   //ç≈ëÂíl
+   assert $("p").max { it.text() }.text() == "5"
+   //ç≈è¨íl
+   assert $("p").min { it.text() }.text() == "1"
+   
+   
+}
